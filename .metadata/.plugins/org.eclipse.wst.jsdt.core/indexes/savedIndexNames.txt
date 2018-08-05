@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+E:\J2EEWorkspace\spring\online-shopping\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+893924840.index
+2326896128.index
+2857194397.index
+547863804.index
+1714849106.index
