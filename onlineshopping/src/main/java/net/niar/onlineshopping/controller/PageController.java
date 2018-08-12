@@ -10,28 +10,31 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 	
 	@RequestMapping(value = {"/", "home", "/index"})
-	public ModelAndView index() {
+	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView("page");
 		
-		mv.addObject("greeting", "Welcome to spring mvc");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
 		
 		return mv;
 	}
 	
-	@RequestMapping(value="/test1")
-	public ModelAndView test1(@RequestParam("greeting")String greeting) {
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("page");
 		
-		mv.addObject("greeting", greeting);
+		mv.addObject("title", "About Us");
+		mv.addObject("userClickAbout", true);
 		
 		return mv;
 	}
 	
-	@RequestMapping(value="/test2/{greeting}-{name}")
-	public ModelAndView test2(@PathVariable("greeting")String greeting, @PathVariable("name")String name) {
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
 		ModelAndView mv = new ModelAndView("page");
 		
-		mv.addObject("greeting", greeting + ", " + name);
+		mv.addObject("title", "Contact Us");
+		mv.addObject("userClickContact", true);
 		
 		return mv;
 	}
