@@ -3,9 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url var="css" value="resources/css"/>
-<spring:url var="js" value="resources/js"/>
-<spring:url var="images" value="resources/images"/>
+<spring:url var="css" value="/resources/css"/>
+<spring:url var="js" value="/resources/js"/>
+<spring:url var="images" value="/resources/images"/>
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 
@@ -52,6 +52,10 @@
 	
 	    <c:if test="${userClickContact == true}">
           <%@include file="contact.jsp" %>
+	    </c:if>
+	    
+	    <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+          <%@include file="listProducts.jsp" %>
 	    </c:if>
 	  </div>
 	  
